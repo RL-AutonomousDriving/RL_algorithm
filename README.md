@@ -15,9 +15,9 @@ The high-level decision-making strategies for autonomous driving have seen less 
 
 ## Links
 
-[Project_Presentation](https://github.com/RL-AutonomousDriving/RL_algorithm/tree/main/Presentation_slides)
-[Project_Report](https://github.com/RL-AutonomousDriving/RL_algorithm/tree/main/Project_Report)
-[DQN and Dueling DQN code](https://github.com/RL-AutonomousDriving/RLAgent)
+- [Project_Presentation](https://github.com/RL-AutonomousDriving/RL_algorithm/tree/main/Presentation_slides)
+- [Project_Report](https://github.com/RL-AutonomousDriving/RL_algorithm/tree/main/Project_Report)
+- [DQN and Dueling DQN code](https://github.com/RL-AutonomousDriving/RLAgent)
 
 ## Highway Environment
 
