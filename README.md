@@ -15,6 +15,8 @@ The high-level decision-making strategies for autonomous driving have seen less 
 
 ## Highway Environment
 
+Environment Link: [Highway Environment Implementation](https://github.com/RL-AutonomousDriving/Autonomous_Driving)
+
 The highway environment consists of multiple lanes where the ego vehicle which is a driving agent and other surrounding vehicles can drive.  The agent is driving on a straight highway with several lanes, and is rewarded for reaching a high speed, staying on the rightmost lanes and avoiding collisions. The reward points for the agent are specified in the config file. 
 
 RIGHT_LANE_REWARD: float= 0.1 
@@ -30,6 +32,12 @@ CONTROLLED_VEHICLE: 1
 To manage the lateral and longitudinal movements of the ego and surrounding vehicles. It consists of two parts. The upper level contains two models, which are Intelligent driver model (IDM) and Minimize overall braking induced by lane changes (MOBIL). The lower level focuses on regulating vehicle velocity and acceleration. The original speed of the ego vehicle is chosen from [23, 25] m/s and the maximum speed of vehicle is 40 m/s. The length and width of all vehicles are 5m and 2m. The initial velocity of the surrounding vehicles is randomly chosen from [20, 23] m/s, and their behaviors are manipulated by IDM and MOBIL. Car-following and collision free is handled by IDM and it is implemented for Adaptive Cruise Controller (ACC). 
 
 ![alt text](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Images/env.png)
+
+## Deep Q-Network
+
+The traditional Deep reinforcement learning are the powerful to deal with the long sequential problems and it is independent of the historical data. But DRL was unable to address highway overtaking problems because of the continuous action space and large state space. To overcome this, we use deep neural network which is a non-linear function approximator to map the state and action into a value. When it is used in context of Q-learning, it refers to the Deep Q-Network (DQN). It is the first DRL methods proposed by the DeepMind. Deep neural networks empower RL to directly deal with high dimensional states like images. Motivation for Deep Q Network to solve this problem is – huge number of states causing numerous combinations of possible state-action combinations. Highway environment is ever changing and requires lot of time to explore all the state. The following equation explains the update value of Q-function: 
+
+![alt text](
 
 
 
