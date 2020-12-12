@@ -71,6 +71,8 @@ Techniques | Episodes | Training Time | Testing Time | Reward point for 3 episod
 DQN | 2000 | 9hr | 28s | [35.8, 11.1, 37.4] | High variance, takes longer time to train |
 Dueling DQN | 2000 | 7hr | 26s | [30.7, 30.7, 32.7] | Variance is handled, agent learns to avoid collision | 
 
+![Simulation](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Images/highway_sim.gif)
+
 
 ## Conclusions:
 
