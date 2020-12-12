@@ -15,7 +15,7 @@ The high-level decision-making strategies for autonomous driving have seen less 
 
 ## Highway Environment
 
-Environment Link: [Highway Environment Implementation](https://github.com/RL-AutonomousDriving/Autonomous_Driving)
+Environment Link: [Code for Highway Environment Implementation](https://github.com/RL-AutonomousDriving/Autonomous_Driving)
 
 The highway environment consists of multiple lanes where the ego vehicle which is a driving agent and other surrounding vehicles can drive.  The agent is driving on a straight highway with several lanes, and is rewarded for reaching a high speed, staying on the rightmost lanes and avoiding collisions. The reward points for the agent are specified in the config file. 
 
@@ -39,7 +39,7 @@ Source for image: https://arxiv.org/pdf/2007.08691.pdf
 
 ## Deep Q-Network
 
-Execution file: [DQN Architecture](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Deep_Q_Network.ipynb)
+Execution file: [Code for DQN Architecture](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Deep_Q_Network.ipynb)
 
 The traditional Deep reinforcement learning are the powerful to deal with the long sequential problems and it is independent of the historical data. But DRL was unable to address highway overtaking problems because of the continuous action space and large state space. To overcome this, we use deep neural network which is a non-linear function approximator to map the state and action into a value. When it is used in context of Q-learning, it refers to the Deep Q-Network (DQN). It is the first DRL methods proposed by the DeepMind. Deep neural networks empower RL to directly deal with high dimensional states like images. Motivation for Deep Q Network to solve this problem is – huge number of states causing numerous combinations of possible state-action combinations. Highway environment is ever changing and requires lot of time to explore all the state. The following equation explains the update value of Q-function: 
 
@@ -49,7 +49,7 @@ Source: https://www.analyticsvidhya.com/blog/2019/04/introduction-deep-q-learnin
 
 ## Dueling DQN. 
 
-Execution file: [Dueling DQN Architecture](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Dueling_DQN.ipynb)
+Execution file: [Code for Dueling DQN Architecture](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Dueling_DQN.ipynb)
 
 Dueling DQN has two separate network one to estimate the state-value and the other one to estimate the advantages for each action in that state. This solves one of the specific problems to this domain. In environments like Atari single agent games and highway environment like this, at most of the states the agent action is not relevant. For example, when there are no chance of collision in any lane, the agent action is of least important. Dueling architecture addresses the problem of Q value overshooting and prevents model to learn from high Q values. 
 
@@ -66,4 +66,6 @@ DQN | 2000 | 9hr | 28s | [35.8, 11.1, 37.4] | High variance, takes longer time t
 Dueling DQN | 2000 | 7hr | 26s | [30.7, 30.7, 32.7] | Variance is handled, agent learns to avoid collision | 
 
 
+## Conclusions:
 
+After training for 2000 episodes, the simulation results shows that DQN with Dueling network architecture performs better than DQN. In future, we can try Noisy DQN model and DQN with Prioritized Experience Replay to see if we can improve the current model performance. 
