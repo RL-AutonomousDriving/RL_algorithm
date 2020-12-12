@@ -75,3 +75,16 @@ Dueling DQN | 2000 | 7hr | 26s | [30.7, 30.7, 32.7] | Variance is handled, agent
 ## Conclusions:
 
 After training for 2000 episodes, the simulation results shows that DQN with Dueling network architecture performs better than DQN. In future, we can try Noisy DQN model and DQN with Prioritized Experience Replay to see if we can improve the current model performance. 
+
+## References
+
+[1] Liao, Jiangdong., Liu, Teng., Tang, Xiaolin., Mu, Xingyu., Huang, Bing., & Cao, Dongpu, "Decision-making strategy on Highway for Autonomous Vehicles using Deep Reinforcement Learning" 
+[2] Li, Xin., Xu, Xin., Zuo, Lei, "Reinforcement Learning based overtaking decision-making for highway autonomous driving" in 2015 Sixth International Conference on Intelligent Control and Information Processing (ICICIP) 
+[3] L. Edouard, “An environment for autonomous driving decisionmaking,” https://github.com/ eleurent/highway-env, GitHub, 2018. 
+[4] M. Zhou, X. Qu, and S. Jin, “On the impact of cooperative autonomous vehicles in improving freeway merging: a modified intelligent driver model-based approach,” IEEE Trans. Intell. Transport. Syst., vol. 18, no. 6, pp. 1422-1428, June 2017. 
+[5] C. J. Hoel, K. Driggs-Campbell, K. Wolff, L. Laine, and M. J. Kochenderfer, “Combining planning and deep reinforcement learning in tactical decision making for autonomous driving,” IEEE Transactions on Intelligent Vehicles, vol. 5, no. 2, pp. 294-305, 2019. 
+[6] C. J. Hoel, K. Wolff, and L. Laine, “Tactical decision-making in autonomous driving by reinforcement learning with uncertainty estimation,” arXiv preprint arXiv:2004.10439, 2020. 
+[7] P. Hart, and A. Knoll, “Using counterfactual reasoning and reinforcement learning for decision-making in autonomous driving,” arXiv preprint arXiv:2003.11919, 2020. 
+[8] A. Furda, and L. Vlacic, “Enabling safe autonomous driving in real-world city traffic using multiple criteria decisions making,” IEEE Intelli. Trans. Sys. Magaz., vol. 3, no. 1, pp. 4-17, 2011. 
+[9] S. Nageshrao, H. E. Tseng, and D. Filev, “Autonomous highway driving using deep reinforcement learning,” In 2019 IEEE International Conference on Systems, Man and Cybernetics (SMC), pp. 2326-2331, 2019. 
+[10] S. Han, and F. Miao, “Behavior Planning For Connected Autonomous Vehicles Using Feedback Deep Reinforcement Learning,” arXiv preprint arXiv:2003.04371, 2020. 
