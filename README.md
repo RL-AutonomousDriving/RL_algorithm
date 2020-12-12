@@ -27,18 +27,43 @@ CONTROLLED_VEHICLE: 1
 
 ![alt text](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Images/Highway.png)
 
+Source for image: https://highway-env.readthedocs.io/en/latest/environments/highway.html
+
 ## Hierarchical Motion Controller:
 
 To manage the lateral and longitudinal movements of the ego and surrounding vehicles. It consists of two parts. The upper level contains two models, which are Intelligent driver model (IDM) and Minimize overall braking induced by lane changes (MOBIL). The lower level focuses on regulating vehicle velocity and acceleration. The original speed of the ego vehicle is chosen from [23, 25] m/s and the maximum speed of vehicle is 40 m/s. The length and width of all vehicles are 5m and 2m. The initial velocity of the surrounding vehicles is randomly chosen from [20, 23] m/s, and their behaviors are manipulated by IDM and MOBIL. Car-following and collision free is handled by IDM and it is implemented for Adaptive Cruise Controller (ACC). 
 
 ![alt text](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Images/env.png)
 
+Source for image: https://arxiv.org/pdf/2007.08691.pdf
+
 ## Deep Q-Network
+
+Execution file: [DQN Architecture](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Deep_Q_Network.ipynb)
 
 The traditional Deep reinforcement learning are the powerful to deal with the long sequential problems and it is independent of the historical data. But DRL was unable to address highway overtaking problems because of the continuous action space and large state space. To overcome this, we use deep neural network which is a non-linear function approximator to map the state and action into a value. When it is used in context of Q-learning, it refers to the Deep Q-Network (DQN). It is the first DRL methods proposed by the DeepMind. Deep neural networks empower RL to directly deal with high dimensional states like images. Motivation for Deep Q Network to solve this problem is – huge number of states causing numerous combinations of possible state-action combinations. Highway environment is ever changing and requires lot of time to explore all the state. The following equation explains the update value of Q-function: 
 
-![alt text](
+![alt text](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Images/DQN.png)
 
+Source: https://www.analyticsvidhya.com/blog/2019/04/introduction-deep-q-learning-python/
+
+## Dueling DQN. 
+
+Execution file: [Dueling DQN Architecture](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Dueling_DQN.ipynb)
+
+Dueling DQN has two separate network one to estimate the state-value and the other one to estimate the advantages for each action in that state. This solves one of the specific problems to this domain. In environments like Atari single agent games and highway environment like this, at most of the states the agent action is not relevant. For example, when there are no chance of collision in any lane, the agent action is of least important. Dueling architecture addresses the problem of Q value overshooting and prevents model to learn from high Q values. 
+
+![alt text](https://github.com/RL-AutonomousDriving/RL_algorithm/blob/main/Images/DDQN.png)
+
+Source: https://arxiv.org/pdf/2007.08691.pdf
+
+## Results
+
+
+Techniques | Episodes | Training Time | Testing Time | Reward point for 3 episodes in testing | Results
+--- | --- | --- | --- | --- | --- | 
+DQN | 2000 | 9hr | 28s | [35.8, 11.1, 37.4] | High variance, takes longer time to train |
+Dueling DQN | 2000 | 7hr | 26s | [30.7, 30.7, 32.7] | Variance is handled, agent learns to avoid collision | 
 
 
 
